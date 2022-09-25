@@ -1,0 +1,255 @@
+{
+	// Place your snippets for systemverilog here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+
+	//? 
+	"always posedge": {
+		"prefix": "ap",
+		"body": [
+			"always@(posedge clk) begin",
+				"\t${0}",
+			"end"
+		],
+		"description": "always posedge"
+	},
+	//? 
+	"always negedge": {
+		"prefix": "an",
+		"body": [
+			"always@(negedge clk) begin",
+				"\t${0}",
+			"end"
+		],
+		"description": "always negedge"
+	},
+	//?
+	"always negedge reset": {
+		"prefix": "anr",
+		"body": [
+			"always@(posedge clk or negedge rstn) begin",
+				"\tif(rstn == 1'b0)begin",
+					"\t\t${0}",
+				"\tend",	
+				"\telse begin",
+					"\t\t${1}",
+				"\tend",
+			"end"
+		],
+		"description": "always negedge reset"
+	},
+	//?
+	"always posedge reset": {
+		"prefix": "apr",
+		"body": [
+			"always@(posedge clk or negedge rstn) begin",
+				"\tif(rstn == 1'b0)begin",
+					"\t\t${0}",
+				"\tend",	
+				"\telse begin",
+					"\t\t${1}",
+				"\tend",
+			"end"
+		],
+		"description": "always posedge reset"
+	},
+	//?
+	"always comb": {
+		"prefix": "ac",
+		"body": [
+			"always@(*) begin",
+				"\t${0}",
+			"end"
+		],
+		"description": "always comb"
+	},
+	//?
+	"sigle wire":{
+		"prefix": "swi", 
+		"body": ["wire\t[0:0]\t\t\t\ttw${0};\t//"],
+		"description": "sigle wire"
+		},
+	//?
+	"sigle reg":{
+		"prefix": "sre", 
+		"body": ["reg \t[0:0]\t\t\t\ttw${0};\t//"],
+		"description": "sigle reg"
+		},
+
+	"sigle input":{
+		"prefix": "sit", 
+		"body": ["input\t wire [0:0]\t\t\t\ti${0},\t//"],
+		"description": "sigle input"
+		},
+
+	"sigle output":{
+		"prefix": "sot", 
+		"body": ["output\treg [0:0]\t\t\t\to${0},\t//"],
+		"description": "sigle output"
+		},
+
+	"sigle inout":{
+		"prefix": "sio", 
+		"body": ["inout \t\t [0:0]\t\t\t\to${0},\t//"],
+		"description": "sigle inout"
+		},
+		
+	//?
+	"multi wire":{
+		"prefix": "mwi", 
+		"body": ["wire\t[${1}:0]\t\t\t\ttw${0};\t//"],
+		"description": "multi wire"
+		},
+	//?
+	"multi reg":{
+		"prefix": "mre", 
+		"body": ["reg \t[${1}:0]\t\t\t\ttw${0};\t//"],
+		"description": "multi reg"
+		},
+
+	"multi input":{
+		"prefix": "mit", 
+		"body": ["input\twire [${1}:0]\t\t\t\ttw${0},\t//"],
+		"description": "multi input"
+		},
+
+	"multi output":{
+		"prefix": "mot", 
+		"body": ["output\treg  [${1}:0]\t\t\t\ttw${0},\t//"],
+		"description": "multi output"
+		},
+	"multi inout":{
+		"prefix": "mio", 
+		"body": ["inout\t\t [${1}:0]\t\t\t\ttw${0},\t//"],
+		"description": "multi inout"
+		},
+
+	"if state": {
+		"prefix": "if",
+		"body": [
+			"if(${1}) begin",
+				"\t${0}",
+			"end"
+		],
+		"description": "if state"
+	},
+
+	"if else state": {
+		"prefix": "ife",
+		"body": [
+			"if(${4}) begin",
+				"\t${3}",
+			"end",
+			"else(${2}) begin",
+				"\t${1}",
+			"end"
+		],
+		"description": "if else state"
+	},	
+
+	"else state": {
+		"prefix": "el",
+		"body": [
+			"else begin",
+				"\t${0}",
+			"end"
+		],
+		"description": "else state"
+	},
+
+	"while state": {
+		"prefix": "wh",
+		"body": [
+			"while(${1}) begin",
+				"\t${0}",
+			"end"
+		],
+		"description": "while state"
+	},	
+
+	"repeat state": {
+		"prefix": "rep",
+		"body": [
+			"repeat(${1}) begin",
+				"\t${0}",
+			"end"
+		],
+		"description": "repeat state"
+	},	
+
+	"case state": {
+		"prefix": "case",
+		"body": [
+			"case (${1})",
+			"\t${2}: begin",
+				"\t\t${0}",
+			"\tend",
+			"\tdefault: begin",
+				"\t\t",
+			"\tend",
+			"endcase"
+		],
+		"description": "case state"
+	},	
+
+	"module block": {
+		"prefix": "mod",
+		"body": [
+			"module N (${1}",
+			"\t${0}",
+			"),",
+			"",
+			"endmodule"
+		],
+		"description": "module block"
+	},
+
+	"for loop": {
+		"prefix": "for",
+		"body": [
+			"for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) begin",
+			"\t",
+			"end"
+		],
+		"description": "for loop"
+	},
+
+	"initial": {
+		"prefix": "ini",
+		"body": [
+			"initial begin",
+				"\t${0}",
+			"end"
+		],
+		"description": "initial"
+	},		
+
+	"parameter": {
+		"prefix": "par",
+		"body": [
+			"parameter \t${1}\t=\t${0};",
+		],
+		"description": "parameter"
+	},	
+
+	"localparam": {
+		"prefix": "lpar",
+		"body": [
+			"localparam \t${1}\t=\t${0};",
+		],
+		"description": "localparam"
+	},	
+
+	"begin and end":{
+		"prefix": "bb",
+		"body": [
+			" begin",
+			"\t${0}",
+			"end"
+		],
+		"description": "localparam"		
+	}
+
+}

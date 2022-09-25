@@ -1,0 +1,115 @@
+{
+    "bracketPairColorizer.depreciation-notice": false,
+    "editor.fontSize": 18,
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "verilog.linting.linter": "xvlog",
+    "hediet.vscode-drawio.codeLinkActivated": false,
+    "hediet.vscode-drawio.theme": "min" ,
+    "git.path": "S:/Git/cmd/git.exe",
+    "diffEditor.ignoreTrimWhitespace": false ,
+
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav"
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.defaultInterpreterPath": "S:\\Program_SoftWare\\Python\\Python39\\python.exe",
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true
+    },
+
+    "KeilAssistant.MDK.Uv4Path": "S:\\Program_SoftWare\\Keil_v5\\UV4\\UV4.exe",
+    "editor.fontLigatures": true,
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            "fontStyle": "italic"
+        }, 
+    },
+    "editor.fontFamily": "Source Code Pro , 'Source Code Pro Light', monospace",
+    "workbench.colorTheme": "One Dark Pro",
+    "verilog-format.path": "S:\\Program SoftWare\\VS Code Plugin\\verilog-format-WIN\\verilog-format.exe",
+    "verilog-format.setting": "S:\\Program SoftWare\\VS Code Plugin\\verilog-format-WIN\\.verilog-format.properties",
+    "remote.SSH.remotePlatform": {
+        "10.102.32.39": "linux"
+    },
+    
+}
